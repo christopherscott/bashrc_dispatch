@@ -6,11 +6,15 @@ PREFIX=$HOME/bashrc_dispatch/
 [ -f "${PREFIX}git-completion.sh" ] && . "${PREFIX}git-completion.sh"
 [ -f "${PREFIX}reactive-prompt.sh" ] && . "${PREFIX}reactive-prompt.sh"
 
+# token
+shell_is_linux && export TOKEN="${COLOR_CYAN}λ${COLOR_CYAN}"
+shell_is_osx && export TOKEN="${COLOR_GREEN}☯${COLOR_NONE} "
+
 # high-speed prompt
 export PS1='$(show_time) $(prompt_color)'"${COLOR_GRAY}[${COLOR_NONE}"'$(prompt_color)'"\u${COLOR_NONE}${COLOR_GRAY}@${COLOR_NONE}"'$(prompt_color)'"\h${COLOR_NONE}${COLOR_GRAY}]${COLOR_NONE}"\
 " ${COLOR_GRAY}\w${COLOR_NONE}"\
 "${COLOR_BROWN}"'$(show_git_branch_and_status)'"${COLOR_NONE}\n"\
-"\[\033[1;35m\]"'$(show_exit_status)'"\[\033[0m\]\[\e[1;32m\]☯\[\e[m\]  "
+"\[\033[1;35m\]"'$(show_exit_status)'"${TOKEN} "
 
 shell_is_linux && alias l="ls -gGh --color"
 shell_is_osx && alias l="ls -ohgG"
