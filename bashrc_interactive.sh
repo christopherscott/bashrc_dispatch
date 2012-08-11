@@ -11,7 +11,7 @@ shell_is_linux && export TOKEN="${COLOR_CYAN}λ${COLOR_NONE}"
 shell_is_osx && export TOKEN="${COLOR_GREEN}☯${COLOR_NONE} "
 
 # high-speed prompt
-export PS1='$(show_time) $(prompt_color)'"${COLOR_GRAY}[${COLOR_NONE}"'$(prompt_color)'"\u${COLOR_NONE}${COLOR_GRAY}@${COLOR_NONE}"'$(prompt_color)'"\h${COLOR_NONE}${COLOR_GRAY}]${COLOR_NONE}"\
+export PS1='$(show_time) ...$(uname)... $(prompt_color)'"${COLOR_GRAY}[${COLOR_NONE}"'$(prompt_color)'"\u${COLOR_NONE}${COLOR_GRAY}@${COLOR_NONE}"'$(prompt_color)'"\h${COLOR_NONE}${COLOR_GRAY}]${COLOR_NONE}"\
 " ${COLOR_GRAY}\w${COLOR_NONE}"\
 "${COLOR_BROWN}"'$(show_git_branch_and_status)'"${COLOR_NONE}\n"\
 "\[\033[1;35m\]"'$(show_exit_status)'"${TOKEN} "
