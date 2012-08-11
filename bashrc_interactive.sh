@@ -12,7 +12,7 @@ export PS1='$(show_time) $(prompt_color)'"${COLOR_GRAY}[${COLOR_NONE}"'$(prompt_
 "${COLOR_BROWN}"'$(show_git_branch_and_status)'"${COLOR_NONE}\n"\
 "\[\033[1;35m\]"'$(show_exit_status)'"\[\033[0m\]\[\e[1;32m\]☯\[\e[m\]  "
 
-shell_is_linux && alias l="ls -gGh"
+shell_is_linux && alias l="ls -gGh --color"
 shell_is_osx && alias l="ls -ohgG"
 
 alias ll="ls -AgnhG"
