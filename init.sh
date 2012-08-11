@@ -49,12 +49,12 @@ fi
 
 
 # Now dispatch special files
-PREFIX=${HOME}/.
+PREFIX=${HOME}/bashrc_dispatch/
 
-[ -f "${PREFIX}bashrc_all" ]                                 && . "${PREFIX}bashrc_all"
-[ -f "${PREFIX}bashrc_script" ]      && shell_is_script      && . "${PREFIX}bashrc_script"
-[ -f "${PREFIX}bashrc_interactive" ] && shell_is_interactive && . "${PREFIX}bashrc_interactive"
-[ -f "${PREFIX}bashrc_login" ]       && shell_is_login       && . "${PREFIX}bashrc_login"
+[ -f "${PREFIX}bashrc_all.sh" ]                                 && . "${PREFIX}bashrc_all.sh"
+[ -f "${PREFIX}bashrc_script.sh" ]      && shell_is_script      && . "${PREFIX}bashrc_script.sh"
+[ -f "${PREFIX}bashrc_interactive.sh" ] && shell_is_interactive && . "${PREFIX}bashrc_interactive.sh"
+[ -f "${PREFIX}bashrc_login.sh" ]       && shell_is_login       && . "${PREFIX}bashrc_login.sh"
 
 
 # Export or unset functions and shell variables
