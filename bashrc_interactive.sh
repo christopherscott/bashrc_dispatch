@@ -7,7 +7,7 @@ PREFIX=$HOME/bashrc_dispatch/
 [ -f "${PREFIX}reactive-prompt.sh" ] && . "${PREFIX}reactive-prompt.sh"
 
 # token
-shell_is_linux && export TOKEN="${COLOR_CYAN}λ${COLOR_CYAN}"
+shell_is_linux && export TOKEN="${COLOR_CYAN}λ${COLOR_NONE}"
 shell_is_osx && export TOKEN="${COLOR_GREEN}☯${COLOR_NONE} "
 
 # high-speed prompt
